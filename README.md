@@ -15,9 +15,9 @@ No transporte rodoviário de contêineres, as empresas enfrentam multas pesadas 
 
 * **Configuração e Variáveis Globais:** Carrega as bibliotecas necessárias (`requests`, `datetime`), deteta chaves de ambiente para a Google Routes API e define os parâmetros regulatórios essenciais (`desc_min = 11 * 60`, `jorn_max = 10 * 60`, e restrições urbanas).
 * **Validação Fiscal (MDF-e):** Valida a chave de acesso do documento fiscal de 44 dígitos através do algoritmo oficial de Módulo 11 (`calc_dv`) e checa o retorno da SEFAZ (`100` para autorizado, `101` para cancelado).
-* **Controlo de Descanso e Jornada:** Faz o cálculo do histórico do motorista, confrontando o intervalo de descanso anterior com o mínimo exigido por lei[cite: 9].
-* **Telemetria do Veículo:** Lê o fluxo de posições (velocidade e ignição) para detetar se o caminhão está retido há muito tempo por causa de trânsito ou paragens inesperadas[cite: 9].
-* **Roteirização, Pedágios e Janelas:** Comunica com a Google Routes API para calcular tempo real de percurso e pedágios (com suporte a 5 eixos), validando também o horário previsto de chegada com as restrições da fábrica[cite: 9].
+* **Controlo de Descanso e Jornada:** Faz o cálculo do histórico do motorista, confrontando o intervalo de descanso anterior com o mínimo exigido por lei.
+* **Telemetria do Veículo:** Lê o fluxo de posições (velocidade e ignição) para detetar se o caminhão está retido há muito tempo por causa de trânsito ou paragens inesperadas.
+* **Roteirização, Pedágios e Janelas:** Comunica com a Google Routes API para calcular tempo real de percurso e pedágios (com suporte a 5 eixos), validando também o horário previsto de chegada com as restrições da fábrica.
 
 ---
 
