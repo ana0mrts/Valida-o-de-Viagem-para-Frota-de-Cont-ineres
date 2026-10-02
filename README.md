@@ -7,7 +7,7 @@ No transporte rodoviário de contêineres, as empresas enfrentam multas pesadas 
 * **Telemetria e Retenções:** Veículos parados por tempo excessivo em congestionamentos não previstos.
 * **Restrições de Trânsito Urbano e Janelas:** Caminhões pesados a entrarem em zonas urbanas fora dos horários permitidos ou a chegarem à fábrica fora da janela de recebimento.
 
-**A Solução:** O script `viagem.py` automatiza todo este cruzamento de dados num único comando executado diretamente no terminal, decidindo de forma automática se a viagem é **LIBERADA** ou **BLOQUEADA**.
+**A Solução:** Automatiza todo este cruzamento de dados num único comando executado diretamente no terminal, decidindo de forma automática se a viagem é **LIBERADA** ou **BLOQUEADA**.
 
 ---
 
