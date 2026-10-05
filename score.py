@@ -18,7 +18,7 @@ def calc_score(comprador):
         termo = p["termo"]
         pagamento = p["pagamento"]
         
-        #Converte para datetime caso os dados reais venham em formato de texto (string)
+        # Converte para datetime
         if isinstance(termo, str):
             termo = datetime.strptime(termo, "%Y-%m-%d")
         if isinstance(pagamento, str):
@@ -34,12 +34,12 @@ def calc_score(comprador):
         print(f"  [FALHA] Comprador ruim (muitos atrasos).")
         return False
         
-    print(f"  [OK] Comprador bom (adimplente).")
+    print(f"  [OK] Comprador bom.")
     return True
 
 if __name__ == "__main__":
     # Exemplo: dados fic (usando datetime diretamente)
-    print("Teste com dados fictícios:")
+    print("TESTE DADOS FICTÍCIOS(BOM):")
     comp_ficticio = {
         "cnpj": "12345678000195",
         "vistoria": True,
@@ -51,8 +51,8 @@ if __name__ == "__main__":
     calc_score(comp_ficticio)
 
     # Exemplo: dados reais (API ou BD)
-    print("\nTeste com dados reais:")
-    comp_real = {
+    print("\nTESTE DADOS FICTÍCIOS(RUIM):")
+    comp_ruim = {
         "cnpj": "98765432000110",
         "vistoria": True,
         "historico": [
@@ -60,4 +60,12 @@ if __name__ == "__main__":
             {"termo": "2026-08-20", "pagamento": "2026-08-28"}
         ]
     }
-    calc_score(comp_real)
+    calc_score(comp_ruim)
+
+    print("\nTESTE VISTORIA REPROVADA:")
+    comp_vistoria = {
+        "cnpj": "55443322000188",
+        "vistoria": False,
+        "historico": []
+    }
+    calc_score(comp_vistoria)
